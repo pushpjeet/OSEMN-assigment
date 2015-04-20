@@ -53,15 +53,17 @@
 
 
     \section*{OSEMN Assignment -Best Buy customers rate iPhones with larger memory more favorably}
+  {20-april-2015}
+    
 \subsection*{Overview}
     
    \par Best Buy Co., Inc. is an American multinational consumer electronics corporation.
 people can have good electronic goods with reasonable prices from best buy using it's website
-or by vising stroes. it isheadquarterd in Richfield, Minnesota, a Minneapolis suburb. It operates in the United States, Puerto Rico, Mexico, Canada and China.[5] The company was founded by Richard M. Schulze and Gary Smoliak in 1966 as an audio specialty store. In 1983, it was renamed and rebranded with more emphasis placed on consumer electronics.
+or by vising stroes. it isheadquarterd in Richfield, Minnesota, a Minneapolis suburb. It operates in the United States, Puerto Rico, Mexico, Canada and China. The company was founded by Richard M. Schulze and Gary Smoliak in 1966 as an audio specialty store. In 1983, it was renamed and rebranded with more emphasis placed on consumer electronics.
 \smallskip
-\par Best Buy's subsidiaries include CinemaNow, Geek Squad, Magnolia Audio Video, Pacific Sales, and Cowboom. Best Buy operates under the Best Buy, Best Buy Mobile, Geek Squad, Magnolia Audio Video and Pacific Sales brands in the United States; the Best Buy, Geek Squad, Best Buy Mobile brands in Canada; Best Buy Mobile and Five Star in China; and Best Buy, Best Buy Express, and Geek Squad in Mexico.[5] Best Buy sells cellular phones with phones from Verizon Wireless, AT andT Mobility, Sprint PCS, Boost Mobile,and T-Mobile USA,[6] in regular stores and standalone Best Buy Mobile stores in shopping malls.
+\par Best Buy's subsidiaries include CinemaNow, Geek Squad, Magnolia Audio Video, Pacific Sales, and Cowboom. Best Buy operates under the Best Buy, Best Buy Mobile, Geek Squad, Magnolia Audio Video and Pacific Sales brands in the United States; the Best Buy, Geek Squad, Best Buy Mobile brands in Canada; Best Buy Mobile and Five Star in China; and Best Buy, Best Buy Express, and Geek Squad in Mexico.Best Buy sells cellular phones with phones from Verizon Wireless, AT andT Mobility, Sprint PCS, Boost Mobile,and T-Mobile USA.In regular stores and standalone Best Buy Mobile stores in shopping malls.
 \smallskip
-\par Best Buy was named "Company of the Year" by Forbes magazine in 2004,[7] "Specialty Retailer of the Decade" by Discount Store News in 2001,[8] ranked in the Top 10 of "America's Most Generous Corporations" by Forbes in 2005 (based on 2004 giving),[9] and made Fortune magazine's List of Most Admired Companies in 2006
+\par Best Buy was named "Company of the Year" by Forbes magazine in 2004,"Specialty Retailer of the Decade" by Discount Store News in 2001,ranked in the Top 10 of "America's Most Generous Corporations" by Forbes in 2005 (based on 2004 giving) and made Fortune magazine's List of Most Admired Companies in 2006
 source:wikipedia
 Best Buy Mobile stores in shopping malls.
 \smallskip
@@ -133,7 +135,7 @@ The  ID ,SKU and Ratings.
 ## [1] 73
 ## 
 ## $queryTime
-## [1] "0.037"
+## [1] "0.038"
 \end{verbatim}
 \begin{alltt}
 \hlcom{# to get all 7291 records, I will need to access pages 1-73}
@@ -165,7 +167,10 @@ The  ID ,SKU and Ratings.
   \hlkwd{write.table}\hlstd{(dfnew,} \hlkwc{file}\hlstd{=}\hlstr{"bestbuy.csv"}\hlstd{,} \hlkwc{col.names}\hlstd{=F,} \hlkwc{row.names}\hlstd{=F,} \hlkwc{append}\hlstd{=T,} \hlkwc{sep}\hlstd{=}\hlstr{","}\hlstd{)}
   \hlcom{# ignore the warning messages}
 \hlstd{\}}
+\end{alltt}
 
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in open.connection(con, "{}rb"{}): HTTP error 403.}}\begin{alltt}
 \hlcom{# Now we can read in the complete set of page data}
 \hlstd{iphone.data} \hlkwb{<-}\hlkwd{read.csv}\hlstd{(}\hlstr{"bestbuy.csv"}\hlstd{,} \hlkwc{header} \hlstd{= F)}
 
@@ -238,7 +243,7 @@ This function is used to the structure of an R object.
 \hlkwd{str}\hlstd{(h1_iphonedata)}
 \end{alltt}
 \begin{verbatim}
-## 'data.frame':	6186 obs. of  3 variables:
+## 'data.frame':	6987 obs. of  3 variables:
 ##  $ ID    : int  49096232 47146465 47102302 47094567 45324375 45302510 44572353 44411807 44400690 43868416 ...
 ##  $ SKU   : int  7640008 7640008 7640008 7640008 7640008 7640008 7640008 7640008 7640008 7640008 ...
 ##  $ Rating: int  5 5 5 5 5 5 5 5 5 5 ...
@@ -247,7 +252,7 @@ This function is used to the structure of an R object.
 \hlkwd{str}\hlstd{(h2_iphonedata)}
 \end{alltt}
 \begin{verbatim}
-## 'data.frame':	24181 obs. of  3 variables:
+## 'data.frame':	27551 obs. of  3 variables:
 ##  $ ID    : int  50562784 49721452 49707095 48364027 48033306 48018326 47673724 47451633 47427730 47328136 ...
 ##  $ SKU   : int  7640035 7640035 7640035 7640035 7640035 7640035 7640035 7640035 7640035 7640035 ...
 ##  $ Rating: int  5 5 4 5 5 3 5 5 5 5 ...
@@ -256,7 +261,7 @@ This function is used to the structure of an R object.
 \hlkwd{str}\hlstd{(h3_iphonedata)}
 \end{alltt}
 \begin{verbatim}
-## 'data.frame':	2417 obs. of  3 variables:
+## 'data.frame':	2720 obs. of  3 variables:
 ##  $ ID    : int  41336160 39407850 41336160 39407850 38310323 38094006 37718426 35989100 35658867 35141248 ...
 ##  $ SKU   : int  1752872 1752872 1752872 1752872 1752872 1752872 1752872 1752872 1752872 1752872 ...
 ##  $ Rating: int  5 5 5 5 5 4 4 5 5 5 ...
@@ -265,7 +270,7 @@ This function is used to the structure of an R object.
 \hlkwd{str}\hlstd{(h4_iphonedata)}
 \end{alltt}
 \begin{verbatim}
-## 'data.frame':	11732 obs. of  3 variables:
+## 'data.frame':	13206 obs. of  3 variables:
 ##  $ ID    : int  16780390 16779462 16779383 16778428 16780390 16779462 16779383 16778428 47363454 46413950 ...
 ##  $ SKU   : int  1755715 1755715 1755715 1755715 1755715 1755715 1755715 1755715 1755715 1755715 ...
 ##  $ Rating: int  4 5 5 5 4 5 5 5 5 5 ...
@@ -284,9 +289,9 @@ displayed as followed
 ##        ID                SKU              Rating     
 ##  Min.   :37230684   Min.   :7640008   Min.   :3.000  
 ##  1st Qu.:38316781   1st Qu.:7640008   1st Qu.:5.000  
-##  Median :39404405   Median :7640008   Median :5.000  
-##  Mean   :40092620   Mean   :7640008   Mean   :4.856  
-##  3rd Qu.:41173868   3rd Qu.:7640008   3rd Qu.:5.000  
+##  Median :39405227   Median :7640008   Median :5.000  
+##  Mean   :40116561   Mean   :7640008   Mean   :4.856  
+##  3rd Qu.:41236912   3rd Qu.:7640008   3rd Qu.:5.000  
 ##  Max.   :49096232   Max.   :7640008   Max.   :5.000
 \end{verbatim}
 \begin{alltt}
@@ -295,9 +300,9 @@ displayed as followed
 \begin{verbatim}
 ##        ID                SKU              Rating     
 ##  Min.   :36906235   Min.   :7640035   Min.   :1.000  
-##  1st Qu.:38724484   1st Qu.:7640035   1st Qu.:5.000  
-##  Median :42183487   Median :7640035   Median :5.000  
-##  Mean   :41534137   Mean   :7640035   Mean   :4.831  
+##  1st Qu.:38728139   1st Qu.:7640035   1st Qu.:5.000  
+##  Median :42224033   Median :7640035   Median :5.000  
+##  Mean   :41568292   Mean   :7640035   Mean   :4.832  
 ##  3rd Qu.:43876564   3rd Qu.:7640035   3rd Qu.:5.000  
 ##  Max.   :50562784   Max.   :7640035   Max.   :5.000
 \end{verbatim}
@@ -309,7 +314,7 @@ displayed as followed
 ##  Min.   :18315609   Min.   :1752872   Min.   :3.000  
 ##  1st Qu.:20468079   1st Qu.:1752872   1st Qu.:5.000  
 ##  Median :22251119   Median :1752872   Median :5.000  
-##  Mean   :25423821   Mean   :1752872   Mean   :4.745  
+##  Mean   :25381724   Mean   :1752872   Mean   :4.746  
 ##  3rd Qu.:32568988   3rd Qu.:1752872   3rd Qu.:5.000  
 ##  Max.   :41336160   Max.   :1752872   Max.   :5.000
 \end{verbatim}
@@ -321,7 +326,7 @@ displayed as followed
 ##  Min.   :16778428   Min.   :1755715   Min.   :1.000  
 ##  1st Qu.:20548244   1st Qu.:1755715   1st Qu.:4.000  
 ##  Median :24163676   Median :1755715   Median :5.000  
-##  Mean   :28244691   Mean   :1755715   Mean   :4.618  
+##  Mean   :28245528   Mean   :1755715   Mean   :4.618  
 ##  3rd Qu.:35348344   3rd Qu.:1755715   3rd Qu.:5.000  
 ##  Max.   :47363454   Max.   :1755715   Max.   :5.000
 \end{verbatim}
@@ -329,32 +334,32 @@ displayed as followed
 \end{knitrout}
 
 \subsection*{}Result
-This section will display the result after analyzing the data
+\par This section will display the result after analyzing the data
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlstd{mean_h1_iphonedata}
 \end{alltt}
 \begin{verbatim}
-## [1] 4.855965
+## [1] 4.856018
 \end{verbatim}
 \begin{alltt}
 \hlstd{mean_h2_iphonedata}
 \end{alltt}
 \begin{verbatim}
-## [1] 4.831479
+## [1] 4.831839
 \end{verbatim}
 \begin{alltt}
 \hlstd{mean_h3_iphonedata}
 \end{alltt}
 \begin{verbatim}
-## [1] 4.745139
+## [1] 4.745956
 \end{verbatim}
 \begin{alltt}
 \hlstd{mean_h4_iphonedata}
 \end{alltt}
 \begin{verbatim}
-## [1] 4.617542
+## [1] 4.617598
 \end{verbatim}
 \begin{alltt}
 \hlstd{iphone.memory}\hlkwb{<-}\hlkwd{c}\hlstd{(}\hlstr{"128Gb"}\hlstd{,}\hlstr{"64Gb"}\hlstd{,}\hlstr{"32Gb"}\hlstd{,}\hlstr{"16Gb"}\hlstd{)}
@@ -377,16 +382,25 @@ Creating graph
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlkwd{library}\hlstd{(ggplot2)}
-\hlstd{g}\hlkwb{<-}\hlkwd{ggplot}\hlstd{(dfg,}\hlkwd{aes}\hlstd{(}\hlkwc{x}\hlstd{=iphone.memory,}\hlkwc{y}\hlstd{=ratings,}\hlkwc{fill}\hlstd{=ratings))}\hlopt{+}\hlkwd{geom_bar}\hlstd{(}\hlkwc{stat}\hlstd{=}\hlstr{"identity"}\hlstd{)}
+\hlstd{g}\hlkwb{<-}\hlkwd{ggplot}\hlstd{(dfg,}\hlkwd{aes}\hlstd{(}\hlkwc{x}\hlstd{=iphone.memory,}\hlkwc{y}\hlstd{=ratings,}\hlkwc{fill}\hlstd{=ratings))}\hlopt{+}\hlkwd{geom_bar}\hlstd{(}\hlkwc{stat}\hlstd{=}\hlstr{"identity"}\hlstd{)}\hlopt{+}\hlkwd{ggtitle}\hlstd{(}\hlstr{"iPhone Rating Comparison"}\hlstd{)}
 \hlstd{g}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\maxwidth]{figure/unnamed-chunk-7-1} 
+\begin{kframe}\begin{alltt}
+\hlcom{#Creating graph}
+\hlstd{h}\hlkwb{<-}\hlkwd{ggplot}\hlstd{(}\hlkwc{data}\hlstd{=dfg,} \hlkwd{aes}\hlstd{(}\hlkwc{x}\hlstd{=iphone.memory,} \hlkwc{y}\hlstd{=ratings,} \hlkwc{group}\hlstd{=}\hlnum{1}\hlstd{))} \hlopt{+}\hlkwd{geom_line}\hlstd{()} \hlopt{+} \hlkwd{geom_point}\hlstd{()}\hlopt{+}\hlkwd{ggtitle}\hlstd{(}\hlstr{"iPhone Rating Comparison Line graph"}\hlstd{)}
+\hlstd{h}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-7-2} 
 
 \end{knitrout}
-As from the graph it is clear that average rating 16Gb ais 4.65 and 
+As from the graph it is clear that average rating 16Gb ais 4.61 and 
 as memory is increasing from 32gb to 128gb average rating is also incgring(4.70,4.75ans4.80)
+\par Moreover, when we seec the second Line graph the picture becomes more clear cause in that 
+data is represented more clearly.for 16 gb iphomes it's rating is 4.61 which is significantly very lower than larger memory phone that is iphone 32gb,64 and 128gb.Thus it shows that "the larger the memory the higher is the rating" .
+\par 
 Hence its cleare that best buy customers rate iphone with the larger memory more favorably.
-
 \end{document}
 

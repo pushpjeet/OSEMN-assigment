@@ -6,15 +6,17 @@
 
 @
     \section*{OSEMN Assignment -Best Buy customers rate iPhones with larger memory more favorably}
+  {20-april-2015}
+    
 \subsection*{Overview}
     
    \par Best Buy Co., Inc. is an American multinational consumer electronics corporation.
 people can have good electronic goods with reasonable prices from best buy using it's website
-or by vising stroes. it isheadquarterd in Richfield, Minnesota, a Minneapolis suburb. It operates in the United States, Puerto Rico, Mexico, Canada and China.[5] The company was founded by Richard M. Schulze and Gary Smoliak in 1966 as an audio specialty store. In 1983, it was renamed and rebranded with more emphasis placed on consumer electronics.
+or by vising stroes. it isheadquarterd in Richfield, Minnesota, a Minneapolis suburb. It operates in the United States, Puerto Rico, Mexico, Canada and China. The company was founded by Richard M. Schulze and Gary Smoliak in 1966 as an audio specialty store. In 1983, it was renamed and rebranded with more emphasis placed on consumer electronics.
 \smallskip
-\par Best Buy's subsidiaries include CinemaNow, Geek Squad, Magnolia Audio Video, Pacific Sales, and Cowboom. Best Buy operates under the Best Buy, Best Buy Mobile, Geek Squad, Magnolia Audio Video and Pacific Sales brands in the United States; the Best Buy, Geek Squad, Best Buy Mobile brands in Canada; Best Buy Mobile and Five Star in China; and Best Buy, Best Buy Express, and Geek Squad in Mexico.[5] Best Buy sells cellular phones with phones from Verizon Wireless, AT andT Mobility, Sprint PCS, Boost Mobile,and T-Mobile USA,[6] in regular stores and standalone Best Buy Mobile stores in shopping malls.
+\par Best Buy's subsidiaries include CinemaNow, Geek Squad, Magnolia Audio Video, Pacific Sales, and Cowboom. Best Buy operates under the Best Buy, Best Buy Mobile, Geek Squad, Magnolia Audio Video and Pacific Sales brands in the United States; the Best Buy, Geek Squad, Best Buy Mobile brands in Canada; Best Buy Mobile and Five Star in China; and Best Buy, Best Buy Express, and Geek Squad in Mexico.Best Buy sells cellular phones with phones from Verizon Wireless, AT andT Mobility, Sprint PCS, Boost Mobile,and T-Mobile USA.In regular stores and standalone Best Buy Mobile stores in shopping malls.
 \smallskip
-\par Best Buy was named "Company of the Year" by Forbes magazine in 2004,[7] "Specialty Retailer of the Decade" by Discount Store News in 2001,[8] ranked in the Top 10 of "America's Most Generous Corporations" by Forbes in 2005 (based on 2004 giving),[9] and made Fortune magazine's List of Most Admired Companies in 2006
+\par Best Buy was named "Company of the Year" by Forbes magazine in 2004,"Specialty Retailer of the Decade" by Discount Store News in 2001,ranked in the Top 10 of "America's Most Generous Corporations" by Forbes in 2005 (based on 2004 giving) and made Fortune magazine's List of Most Admired Companies in 2006
 source:wikipedia
 Best Buy Mobile stores in shopping malls.
 \smallskip
@@ -152,7 +154,7 @@ summary(h4_iphonedata)
 @
 
 \subsection*{}Result
-This section will display the result after analyzing the data
+\par This section will display the result after analyzing the data
 <<>>=
 mean_h1_iphonedata
 mean_h2_iphonedata
@@ -167,12 +169,18 @@ Creating graph
 
 <<>>=
 library(ggplot2)
-g<-ggplot(dfg,aes(x=iphone.memory,y=ratings,fill=ratings))+geom_bar(stat="identity")
+g<-ggplot(dfg,aes(x=iphone.memory,y=ratings,fill=ratings))+geom_bar(stat="identity")+ggtitle("iPhone Rating Comparison")
 g
-@
-As from the graph it is clear that average rating 16Gb ais 4.65 and 
-as memory is increasing from 32gb to 128gb average rating is also incgring(4.70,4.75ans4.80)
-Hence its cleare that best buy customers rate iphone with the larger memory more favorably.
 
+#Creating graph
+h<-ggplot(data=dfg, aes(x=iphone.memory, y=ratings, group=1)) +geom_line() + geom_point()+ggtitle("iPhone Rating Comparison Line graph")
+h
+@
+As from the graph it is clear that average rating 16Gb ais 4.61 and 
+as memory is increasing from 32gb to 128gb average rating is also incgring(4.70,4.75ans4.80)
+\par Moreover, when we seec the second Line graph the picture becomes more clear cause in that 
+data is represented more clearly.for 16 gb iphomes it's rating is 4.61 which is significantly very lower than larger memory phone that is iphone 32gb,64 and 128gb.Thus it shows that "the larger the memory the higher is the rating" .
+\par 
+Hence its cleare that best buy customers rate iphone with the larger memory more favorably.
 \end{document}
 
