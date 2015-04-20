@@ -1,0 +1,284 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.6)  20 APR 2015 05:20
+entering extended mode
+ %&-line parsing enabled.
+**osemnNew.tex
+(./osemnNew.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/framed.sty
+Package: framed 2007/10/04 v 0.95: framed or shaded text with page breaks
+\fb@frw=\dimen105
+\fb@frh=\dimen106
+\FrameRule=\dimen107
+\FrameSep=\dimen108
+)
+(/usr/share/texmf-texlive/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+) (./osemnNew.aux)
+\openout1 = `osemnNew.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count88
+\scratchdimen=\dimen109
+\scratchbox=\box26
+\nofMPsegments=\count89
+\nofMParguments=\count90
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count91
+\MPscratchDim=\dimen110
+\MPnumerator=\count92
+\everyMPtoPDFconversion=\toks16
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Package color Info: Redefining color shadecolor on input line 86.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 88.
+
+Overfull \hbox (1593.96922pt too wide) in paragraph at lines 97--97
+[][]\OT1/cmtt/m/n/10 search[] []<-[] []'(sku=1722036|sku=172463|sku=1751846|sku
+=1755302|sku=1752845|sku=1761054|sku=1755234|sku=1752282|sku=1751837|sku=174102
+9|sku=1755715|sku=1752456|sku=1755357|sku=1752872|sku=1761063|sku=7640035|sku=7
+640053|sku=7640044|sku=7642033|sku=7642024|sku=7638031|sku=7641098|sku=7640008|
+sku=7638128)'[]     []\OT1/cmtt/m/it/10 # SKU's for iPhone 4s16gb,5s-gb,32gb,6 
+and iPhone 6+ 64and 128gb[][] 
+ []
+
+
+Overfull \hbox (45.23273pt too wide) in paragraph at lines 98--98
+[][]\OT1/cmtt/m/n/10 format[] []<-[] []'?format=json&'[]                 []\OT1
+/cmtt/m/it/10 # Results will be in json format[][] 
+ []
+
+
+Overfull \hbox (176.48158pt too wide) in paragraph at lines 101--101
+[]                                          []\OT1/cmtt/m/it/10 # https://devel
+oper.bestbuy.com/documentation/reviews-api[][] 
+ []
+
+
+Overfull \hbox (123.98204pt too wide) in paragraph at lines 102--102
+[]                                          []\OT1/cmtt/m/it/10 # Select 'Get A
+PI Key' in top right hand corner[][] 
+ []
+
+
+Overfull \hbox (13.733pt too wide) in paragraph at lines 103--103
+[][]\OT1/cmtt/m/n/10 fields[] []<-[] []'show=id,sku,rating&'[]           []\OT1
+/cmtt/m/it/10 # I only want these fields[][] 
+ []
+
+
+Overfull \hbox (92.48232pt too wide) in paragraph at lines 104--104
+[][]\OT1/cmtt/m/n/10 pageSize[] []<-[] []'pageSize=100'[]                []\OT1
+/cmtt/m/it/10 # 100 results per page is the max allowed[][] 
+ []
+
+
+Overfull \hbox (13.733pt too wide) in paragraph at lines 106--106
+[][]\OT1/cmtt/m/it/10 # Paste0 allows me to concatenate all of the above into o
+ne long URL[][] 
+ []
+
+
+Overfull \hbox (39.98277pt too wide) in paragraph at lines 111--111
+[][]\OT1/cmtt/m/it/10 # I can read the json and convert it to a list using the 
+jsonlite package[][] 
+ []
+
+
+Overfull \hbox (24.23291pt too wide) in paragraph at lines 115--115
+[][]\OT1/cmtt/m/it/10 # But the the API only returned 100 records (100 is the m
+ax per page) [][] 
+ []
+
+
+Overfull \hbox (8.48305pt too wide) in paragraph at lines 141--141
+[][]\OT1/cmtt/m/it/10 # https://developer.bestbuy.com/documentation#pagination-
+pagination[][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 149
+.
+(/usr/share/R/share/texmf/tex/latex/omscmtt.fd
+File: omscmtt.fd 
+)
+LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 149.
+
+Overfull \hbox (101.24611pt too wide) in paragraph at lines 165--165
+[]  []\OT1/cmtt/m/n/10 write.table[][](dfnew,[] []file[][]=[][]"bestbuy.csv"[][
+],[] []col.names[][]=F,[] []row.names[][]=F,[] []append[][]=T,[] []sep[][]=[][]
+","[][])[][] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 173--173
+[][]\OT1/cmtt/m/n/10 iphone.data[][]<-[][]rename[][](iphone.data,[][]c[][]([][]
+V1[][]=[][]"ID"[][],[] []V2[][]=[][]"SKU"[][],[] []V3[] []=[] []"Rating"[][]))[
+][] 
+ []
+
+[2]
+Overfull \vbox (2.16667pt too high) detected at line 176
+ []
+
+[3]
+Package color Info: Redefining color shadecolor on input line 184.
+Package color Info: Redefining color shadecolor on input line 205.
+ [4]
+Package color Info: Redefining color shadecolor on input line 236.
+
+Overfull \hbox (242.99487pt too wide) in paragraph at lines 245--245
+[]\OT1/cmtt/m/n/10 ##  $ ID    : int  49096232 47146465 47102302 47094567 45324
+375 45302510 44572353 44411807 44400690 43868416 ...[] 
+ []
+
+
+Overfull \hbox (190.49533pt too wide) in paragraph at lines 245--245
+[]\OT1/cmtt/m/n/10 ##  $ SKU   : int  7640008 7640008 7640008 7640008 7640008 7
+640008 7640008 7640008 7640008 7640008 ...[] 
+ []
+
+
+Overfull \hbox (242.99487pt too wide) in paragraph at lines 254--254
+[]\OT1/cmtt/m/n/10 ##  $ ID    : int  50562784 49721452 49707095 48364027 48033
+306 48018326 47673724 47451633 47427730 47328136 ...[] 
+ []
+
+
+Overfull \hbox (190.49533pt too wide) in paragraph at lines 254--254
+[]\OT1/cmtt/m/n/10 ##  $ SKU   : int  7640035 7640035 7640035 7640035 7640035 7
+640035 7640035 7640035 7640035 7640035 ...[] 
+ []
+
+
+Overfull \hbox (242.99487pt too wide) in paragraph at lines 263--263
+[]\OT1/cmtt/m/n/10 ##  $ ID    : int  41336160 39407850 41336160 39407850 38310
+323 38094006 37718426 35989100 35658867 35141248 ...[] 
+ []
+
+
+Overfull \hbox (190.49533pt too wide) in paragraph at lines 263--263
+[]\OT1/cmtt/m/n/10 ##  $ SKU   : int  1752872 1752872 1752872 1752872 1752872 1
+752872 1752872 1752872 1752872 1752872 ...[] 
+ []
+
+
+Overfull \hbox (242.99487pt too wide) in paragraph at lines 272--272
+[]\OT1/cmtt/m/n/10 ##  $ ID    : int  16780390 16779462 16779383 16778428 16780
+390 16779462 16779383 16778428 47363454 46413950 ...[] 
+ []
+
+
+Overfull \hbox (190.49533pt too wide) in paragraph at lines 272--272
+[]\OT1/cmtt/m/n/10 ##  $ SKU   : int  1755715 1755715 1755715 1755715 1755715 1
+755715 1755715 1755715 1755715 1755715 ...[] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 279.
+[5]
+Package color Info: Redefining color shadecolor on input line 334.
+ [6]
+Package color Info: Redefining color shadecolor on input line 377.
+
+Overfull \hbox (95.99615pt too wide) in paragraph at lines 380--380
+[][]\OT1/cmtt/m/n/10 g[][]<-[][]ggplot[][](dfg,[][]aes[][]([][]x[][]=iphone.mem
+ory,[][]y[][]=ratings,[][]fill[][]=ratings))[][]+[][]geom_bar[][]([][]stat[][]=
+[][]"identity"[][])[][] 
+ []
+
+<figure/unnamed-chunk-7-1.pdf, id=25, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-7-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-7-1.pdf>
+Overfull \hbox (15.0pt too wide) in paragraph at lines 384--385
+[][] 
+ []
+
+[7 <./figure/unnamed-chunk-7-1.pdf>] [8] (./osemnNew.aux) ) 
+Here is how much of TeX's memory you used:
+ 1029 strings out of 495061
+ 13138 string characters out of 1182622
+ 73784 words of memory out of 3000000
+ 4242 multiletter control sequences out of 15000+50000
+ 5186 words of font info for 20 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 25i,6n,19p,625b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texmf-texlive/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.
+pfb>
+Output written on osemnNew.pdf (8 pages, 99257 bytes).
+PDF statistics:
+ 57 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+

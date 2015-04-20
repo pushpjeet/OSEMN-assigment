@@ -1,0 +1,178 @@
+\documentclass{article}
+
+\begin{document}
+
+<<>>=
+
+@
+    \section*{OSEMN Assignment -Best Buy customers rate iPhones with larger memory more favorably}
+\subsection*{Overview}
+    
+   \par Best Buy Co., Inc. is an American multinational consumer electronics corporation.
+people can have good electronic goods with reasonable prices from best buy using it's website
+or by vising stroes. it isheadquarterd in Richfield, Minnesota, a Minneapolis suburb. It operates in the United States, Puerto Rico, Mexico, Canada and China.[5] The company was founded by Richard M. Schulze and Gary Smoliak in 1966 as an audio specialty store. In 1983, it was renamed and rebranded with more emphasis placed on consumer electronics.
+\smallskip
+\par Best Buy's subsidiaries include CinemaNow, Geek Squad, Magnolia Audio Video, Pacific Sales, and Cowboom. Best Buy operates under the Best Buy, Best Buy Mobile, Geek Squad, Magnolia Audio Video and Pacific Sales brands in the United States; the Best Buy, Geek Squad, Best Buy Mobile brands in Canada; Best Buy Mobile and Five Star in China; and Best Buy, Best Buy Express, and Geek Squad in Mexico.[5] Best Buy sells cellular phones with phones from Verizon Wireless, AT andT Mobility, Sprint PCS, Boost Mobile,and T-Mobile USA,[6] in regular stores and standalone Best Buy Mobile stores in shopping malls.
+\smallskip
+\par Best Buy was named "Company of the Year" by Forbes magazine in 2004,[7] "Specialty Retailer of the Decade" by Discount Store News in 2001,[8] ranked in the Top 10 of "America's Most Generous Corporations" by Forbes in 2005 (based on 2004 giving),[9] and made Fortune magazine's List of Most Admired Companies in 2006
+source:wikipedia
+Best Buy Mobile stores in shopping malls.
+\smallskip
+\par This paper will check and confirm that wheather  iphones which have larger memory haves higher ratings than low memory iphones or not .ratings  of high phones with lower memory such as 16 Gb and 32Gb as well as highger memory phones such as 64 and 128GB.I started our work with collecting data about iphones such as their memory and ratings.Next step would be to take average of ratings memorywoie and compare them.
+\smallskip
+\subsection*{Gathering Data}
+
+\par To gather the data needed for this comparison, I utilized the Best buy review
+API . which returns JSON (JavaScript Object
+Notation) which has three data elements that I am interested in for this report.
+The  ID ,SKU and Ratings.
+\par ID works as a identifier assigned to a perticuler product.
+ \smallskip The SKU attribute provides the SKU identifier for the product of a review .Data type of SKU is 
+\smallskip The rating attribute provides an average of all the ratings submitted for a product by reviewers. The ratings that can be submitted using a range from zero to five where five is the best rating that can be given. Ratings may be returned using decimals (example 3.5).data type of ratings is float.
+\smallskip
+\par The Reviews API provides access to individual reviews that have been submitted on BESTBUY.COM for the products we sell. You can use it to retrieve information such as the author of the review, the date that the review was submitted, the reviewer's rating (0-5 where 5 is the best) of a product and the reviewer's comments about the product.Along with real-time calls archives are available for reviews data. These are updated daily. Refer to archives for documentation on our archives.
+\smallskip
+\smallskip
+\subsection*{The following shows the code needed to pull the data from best buy review api}
+
+<<q10,echo=TRUE,warning=FALSE>>=
+
+library(jsonlite)
+library (plyr)
+
+url  <- 'http://api.remix.bestbuy.com/'   # the Best Buy API
+path <- 'v1/reviews'                      # Reviews path
+search <- '(sku=1722036|sku=172463|sku=1751846|sku=1755302|sku=1752845|sku=1761054|sku=1755234|sku=1752282|sku=1751837|sku=1741029|sku=1755715|sku=1752456|sku=1755357|sku=1752872|sku=1761063|sku=7640035|sku=7640053|sku=7640044|sku=7642033|sku=7642024|sku=7638031|sku=7641098|sku=7640008|sku=7638128)'     # SKU's for iPhone 4s16gb,5s-gb,32gb,6 and iPhone 6+ 64and 128gb
+format <- '?format=json&'                 # Results will be in json format
+key <- 'apiKey=ztk9ycxpg6rcmu9wfbq7gqe9&' # here is my key
+                                          # get your own at:
+                                          # https://developer.bestbuy.com/documentation/reviews-api
+                                          # Select 'Get API Key' in top right hand corner
+fields <- 'show=id,sku,rating&'           # I only want these fields
+pageSize <- 'pageSize=100'                # 100 results per page is the max allowed
+
+# Paste0 allows me to concatenate all of the above into one long URL
+URLall <-paste0(url, path, search, format, key, fields, pageSize)
+
+#Here is what it looks like all together
+# The above URL will create a page in json format
+# I can read the json and convert it to a list using the jsonlite package
+l = jsonlite::fromJSON(URLall)
+# If I look at l, I see that 
+# My search yielded 7291  total records over 73 total pages
+# But the the API only returned 100 records (100 is the max per page) 
+
+head(l)
+
+# to get all 7291 records, I will need to access pages 1-73
+# if you look at the documentation for the api:
+# https://developer.bestbuy.com/documentation#pagination-pagination
+# you will see that you can specify the page you want
+
+pageText <- '&page=' # i will be the page number
+
+# r allows many types of loops - including a for loop
+
+for (i in  1:73)
+{
+  URLpage <-paste0(URLall, pageText, i)
+
+  l = jsonlite::fromJSON(URLpage)
+  
+  # The ldply function in the plyr package allows us 
+  #  to convert our list (l) to a dataframe (df)
+  dfnew <- ldply (l, data.frame)
+  
+  # the first 9 rows are unneeded header information
+  # the first 10 columns are unneeded header information
+  # we will drop both the unneeded columns and rows
+  dfnew<-dfnew[-c(1:9),-c(1:10)]
+  
+  # we will write each page out to a text file
+  # each page will be appended to the bestbuy.csv file
+  write.table(dfnew, file="bestbuy.csv", col.names=F, row.names=F, append=T, sep=",")
+  # ignore the warning messages
+}
+
+# Now we can read in the complete set of page data
+iphone.data <-read.csv("bestbuy.csv", header = F)
+
+# Since we set col.names=F above, we need to name our columns
+iphone.data<-rename(iphone.data,c(V1="ID", V2="SKU", V3 = "Rating"))
+# now, our data is ready to analyse
+@
+\subsection*{Scrubbung the Data}
+to srub the data means get useful data which is important to calculate the
+result for the qustion asked above.here we need the group of higher and lower memory
+iphone and thier average ratings.so we take ID, SKU ID's, ratings for iphone
+16GB,32GB,64GB and 128GB and take the average of ratinns
+<<>>=
+
+h1_iphonedata<-iphone.data[grep(7640008,iphone.data$SKU),]
+h2_iphonedata<-iphone.data[grep(7640035,iphone.data$SKU),]
+h3_iphonedata<-iphone.data[grep(1752872,iphone.data$SKU),]
+h4_iphonedata<-iphone.data[grep(1755715 ,iphone.data$SKU),]
+mean_h1_iphonedata<-mean(h1_iphonedata$Rating,) 
+mean_h2_iphonedata<-mean(h2_iphonedata$Rating,)
+mean_h3_iphonedata<-mean(h3_iphonedata$Rating,)
+mean_h4_iphonedata<-mean(h4_iphonedata$Rating,)
+
+
+@
+\subsection*{Exploring the data}
+\par In this section, we will take a deeper look into our Useful data. Our data is
+presented in a tabular format with three columns. The first column gives the
+ID, the second column gives the desired SKU, and the third
+column gives raring.
+Let us begin by determining the data type of Data using the class
+function.
+<<>>=
+class(h1_iphonedata)
+class(h2_iphonedata)
+class(h3_iphonedata)
+class(h4_iphonedata)
+@
+
+Now let us go ahead and examine the structure of  useful Data using the str function.
+This function is used to the structure of an R object.
+<<tidy=TRUE>>=
+str(h1_iphonedata)
+str(h2_iphonedata)
+str(h3_iphonedata)
+str(h4_iphonedata)
+@
+The summary of the dataset displays the minimum, first quarter, median,
+mean, third quarter, and maximum value of each variable. The summary is
+displayed as followed
+<<>>=
+summary(h1_iphonedata)
+summary(h2_iphonedata)
+summary(h3_iphonedata)
+summary(h4_iphonedata)
+@
+
+\subsection*{}Result
+This section will display the result after analyzing the data
+<<>>=
+mean_h1_iphonedata
+mean_h2_iphonedata
+mean_h3_iphonedata
+mean_h4_iphonedata
+iphone.memory<-c("128Gb","64Gb","32Gb","16Gb")
+ratings=c(4.845714,4.827815,4.75431,4.618387)
+dfg=data.frame(iphone.memory,ratings)
+dfg
+@
+Creating graph 
+
+<<>>=
+library(ggplot2)
+g<-ggplot(dfg,aes(x=iphone.memory,y=ratings,fill=ratings))+geom_bar(stat="identity")
+g
+@
+As from the graph it is clear that average rating 16Gb ais 4.65 and 
+as memory is increasing from 32gb to 128gb average rating is also incgring(4.70,4.75ans4.80)
+Hence its cleare that best buy customers rate iphone with the larger memory more favorably.
+
+\end{document}
+
